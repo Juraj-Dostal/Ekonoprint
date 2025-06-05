@@ -1,0 +1,31 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+:root {
+    color-scheme: light dark;
+    --primary-color: light-dark(#333, #fafafa);
+    --primary-background: light-dark(#e4e4e4, #121212);
+    --highlight-color: light-dark(hotpink, lime);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    color: CanvasText;
+    background-color: light-dark(#ccc, #333);
+}
