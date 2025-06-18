@@ -12,13 +12,6 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-:root {
-    color-scheme: light dark;
-    --primary-color: light-dark(#333, #fafafa);
-    --primary-background: light-dark(#e4e4e4, #121212);
-    --highlight-color: light-dark(hotpink, lime);
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -26,6 +19,85 @@ html {
 
 body {
     margin-bottom: 60px;
-    color: CanvasText;
-    background-color: light-dark(#ccc, #333);
 }
+
+footer {
+    padding: 0.05rem 0;
+}
+
+:root {
+    color-scheme: light dark;
+    --primary-color: light-dark(#222, #eee);
+    --background-color: light-dark(#fff, #181818);
+    --highlight-color: #ffd500;
+    --link-color: light-dark(#222, #ffd500);
+    --navbar-bg: light-dark(#fff, #222);
+    --navbar-text: light-dark(#222, #ffd500);
+}
+
+body {
+    color: var(--primary-color);
+    background: var(--background-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: var(--highlight-color);
+    }
+
+.navbar {
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .navbar .nav-link {
+        color: var(--navbar-text);
+        margin-right: 1rem;
+        font-weight: bold;
+    }
+
+        .navbar .nav-link:last-child {
+            margin-right: 0;
+        }
+
+.btn-highlight {
+    background: var(--highlight-color);
+    color: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    .btn-highlight:hover {
+        background: #ffe066;
+    }
+
+footer {
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 0.1rem 0;
+    text-align: center;
+    border-top: 1px solid var(--highlight-color);
+}
+/* Príklad použitia zvýrazòujúcej farby */
+.mark {
+    background: var(--highlight-color);
+    color: #222;
+    padding: 0.2em 0.4em;
+    border-radius: 2px;
+}
+/* Prispôsobte si ïalšie prvky pod¾a potreby */
