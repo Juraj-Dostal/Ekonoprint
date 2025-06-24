@@ -25,6 +25,8 @@ namespace WebApp
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            app.UseStatusCodePagesWithReExecute("/NotFound");
 
             app.MapRazorPages();
 

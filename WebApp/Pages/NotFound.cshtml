@@ -1,0 +1,19 @@
+@page
+
+@{
+    ViewData["Title"] = "Not found";
+    Response.StatusCode = 404;
+}
+
+<div class="container text-center ">
+    <h1>Error 404 - @ViewData["Title"]</h1>
+    
+    <p style="font-size: 1.2rem">Je nám ľúto, ale požadovaná stránka nebola nájdená.</p>
+
+    <p style="font-size: 1.2rem">Uistite sa, že ste neurobili chybu v URL adrese.<br>
+    Je možné, že stránka bola premiestnená alebo odstránená.</p>
+
+    <p style="font-size: 1.2rem">Prejsť na <a class="link" asp-area="" asp-page="/Index">hlavnú stranku</a>.</p>
+</div>
+
+

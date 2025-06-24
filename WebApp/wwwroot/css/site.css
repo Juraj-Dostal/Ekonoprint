@@ -1,46 +1,30 @@
 html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px;
-}
-
-footer {
-    padding: 0.05rem 0;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
 }
 
 :root {
-    color-scheme: light dark;
-    --primary-color: light-dark(#222, #eee);
-    --background-color: light-dark(#fff, #181818);
+    color-scheme: dark;
+    --primary-color: #eee;
+    --secondary-color: #aaa;
+    --background-color: #222;
     --highlight-color: #ffd500;
-    --link-color: light-dark(#222, #ffd500);
-    --navbar-bg: light-dark(#fff, #222);
-    --navbar-text: light-dark(#222, #ffd500);
+    --link-color: #ffd500;
+    --navbar-text: #ddd;
 }
 
-body {
+html, body {
     color: var(--primary-color);
     background: var(--background-color);
     font-family: Arial, sans-serif;
+    height: 100%;
     margin: 0;
-    min-height: 100vh;
+}
+
+
+header {
+    border-bottom: 1px solid var(--highlight-color);
 }
 
 a {
@@ -48,29 +32,35 @@ a {
     text-decoration: none;
 }
 
-    a:hover {
-        text-decoration: underline;
-        color: var(--highlight-color);
-    }
+a:hover {
+    color: var(--highlight-color);
+}
 
 .navbar {
-    background: var(--navbar-bg);
-    color: var(--navbar-text);
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-    .navbar .nav-link {
-        color: var(--navbar-text);
-        margin-right: 1rem;
-        font-weight: bold;
-    }
+.navbar .nav-link {
+    font-size: 1.2rem;
+    color: var(--navbar-text);
+    margin-right: 1rem;
+    font-weight: bold;
+}
 
-        .navbar .nav-link:last-child {
-            margin-right: 0;
-        }
+.navbar .nav-link:last-child {
+    margin-right: 0;
+}
+
+.navbar .nav-link:hover {
+    color: var(--highlight-color);
+}
+
+.navbar .nav-link.active {
+    color: var(--highlight-color);
+}
 
 .btn-highlight {
     background: var(--highlight-color);
@@ -82,22 +72,28 @@ a {
     font-weight: bold;
 }
 
-    .btn-highlight:hover {
-        background: #ffe066;
-    }
-
-footer {
-    background: var(--navbar-bg);
-    color: var(--navbar-text);
-    padding: 0.1rem 0;
-    text-align: center;
-    border-top: 1px solid var(--highlight-color);
-}
-/* Príklad použitia zvýrazòujúcej farby */
-.mark {
+.btn-highlight {
     background: var(--highlight-color);
     color: #222;
-    padding: 0.2em 0.4em;
-    border-radius: 2px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
 }
-/* Prispôsobte si ïalšie prvky pod¾a potreby */
+
+.btn-highlight:hover {
+    background: #ffe066;
+}
+
+.footer {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    border-top: 1px solid var(--highlight-color);
+}
+
+.footer .nav-link {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
