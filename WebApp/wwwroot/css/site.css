@@ -6,34 +6,38 @@ html {
 
 :root {
     color-scheme: dark;
-    --primary-color: #eee;
-    --secondary-color: #aaa;
-    --background-color: #222;
-    --highlight-color: #ffd500;
-    --link-color: #ffd500;
+    --primary-color: #6a8eae;
+    --secondary-color: #c6878f;
+    --text-color: #000000;
+    --background-color: #FFFFFF;
+    --highlight-color: #c6878f;
+    --link-color: #6a8eae;
     --navbar-text: #ddd;
 }
 
 html, body {
-    color: var(--primary-color);
+    color: var(--text-color);
     background: var(--background-color);
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
 }
 
-
 header {
-    border-bottom: 1px solid var(--highlight-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
 }
 
 a {
-    color: var(--link-color);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--highlight-color);
+    color: var(--secondary-color);
 }
 
 .navbar {
@@ -45,7 +49,7 @@ a:hover {
 
 .navbar .nav-link {
     font-size: 1.2rem;
-    color: var(--navbar-text);
+    color: var(--primary-color);
     margin-right: 1rem;
     font-weight: bold;
 }
@@ -55,15 +59,15 @@ a:hover {
 }
 
 .navbar .nav-link:hover {
-    color: var(--highlight-color);
+    color: var(--secondary-color);
 }
 
 .navbar .nav-link.active {
-    color: var(--highlight-color);
+    color: var(--secondary-color);
 }
 
 .btn-highlight {
-    background: var(--highlight-color);
+    background: var(--secondary-color);
     color: #222;
     border: none;
     padding: 0.5rem 1rem;
@@ -89,7 +93,7 @@ a:hover {
 .footer {
     font-size: 1rem;
     color: var(--secondary-color);
-    border-top: 1px solid var(--highlight-color);
+    border-top: 1px solid var(--primary-color);
 }
 
 .footer .nav-link {
