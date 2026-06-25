@@ -3,31 +3,55 @@
 @{
     ViewData["Title"] = "Kontakt";
 }
-<div class="text-start w-75 mx-auto my-4">  
 
-    <h1>@ViewData["Title"]</h1>
-    <div class="row">
-        <div class="col">
-            <h3>Ekonoprint družstvo</h3>
-            <p>
-                Rudolfa Viesta 66,<br/> 036 01 Martin<br />
-                <a href="mailto:dostalmt@gmail.com">dostalmt@gmail.com</a>
-                <a href="tel:+421918450530" class="d-block">+421 918 450 530</a>
-            </p>
-            <p>
-                IČO: 45 724 792<br/> 
-            </p>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <div class="col">
+<div class="container text-start w-75 mx-auto my-4 ">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+    <div class="row gy-4 align-items-center">
+    
+        <!-- Kontaktné informácie a mapa -->
+        <div class="col-lg-7">
+            <div class="bg-light rounded p-4 shadow-sm h-100">
                 <p>
-                    Predseda družstva<br/>
-                    Ing. Róbert Dostál<br/>
+                    <strong>Adresa:</strong><br />
+                    Ekonoprint družstvo<br />
+                    Rudolfa Viesta 66,<br />
+                    036 01 Martin
                 </p>
-            </div>
-            <div class="col"> 
-                <img src="~/images/RobertDostal.jpg" alt="Owner" class="img-fluid im rounded "/>
+                <p>
+                    <strong>Telefón:</strong><br />
+                    <a href="tel:+421918450530" class="text-decoration-none">+421 918 450 530</a>
+                </p>
+                <p>
+                    <strong>Email:</strong><br />
+                    <a href="mailto:dostalmt@gmail.com" class="text-decoration-none">dostalmt@gmail.com</a>
+                </p>
+                <p>
+                    <strong>IČO:</strong><br />
+                    45 724 792
+                </p>
+
+                <h4 class="mt-4">Naša poloha</h4>
+                <div class="ratio ratio-16x9 rounded shadow-sm">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.153562595637!2d18.9062906!3d49.083722099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714f8cd4020428d%3A0x4007847ecac9d607!2sEkonoprint%20dru%C5%BEstvo!5e0!3m2!1ssk!2ssk!4v1752491115237!5m2!1ssk!2ssk"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa Ekonoprint družstvo"
+                    ></iframe>
+                </div>
             </div>
         </div>
+
+        <!-- Predseda družstva a foto -->
+        <div class="col-lg-5 d-flex flex-column align-items-center text-center">
+            <div class="mb-3">
+                <h3 class="mb-1 fw-semibold">Predseda družstva</h3>
+                <p class="mb-0">Ing. Róbert Dostál</p>
+            </div>
+            <img src="~/images/RobertDostal.jpg" alt="Ing. Róbert Dostál" class="img-fluid rounded shadow" style="max-width: 300px;" />
+        </div>
+
     </div>
 </div>

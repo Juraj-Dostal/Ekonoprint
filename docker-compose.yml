@@ -1,0 +1,16 @@
+services:                                                                                               
+  ekonoprintweb:                                                                                        
+    image: ekonoprint                                                                                   
+    build:                                                                                              
+      context: .                                                                                        
+      dockerfile: Dockerfile                                                                            
+    ports:                                                                                              
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: "SilneHeslo123!"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "/https/aspnetapp.pfx"
+    volumes:
+      - ${HOME}/.aspnet/https:/https:ro
+    restart: unless-stopped

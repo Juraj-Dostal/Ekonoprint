@@ -101,3 +101,30 @@ a:hover {
     color: var(--secondary-color);
 }
 
+/* Vlastný CSS pre karty */
+.card-title-divider {
+    position: relative; /* Potrebné pre absolútne pozicovanie pseudo-elementu */
+    padding-bottom: 10px; /* Priestor pre čiaru */
+    margin-bottom: 10px; /* Priestor pod čiarou */
+}
+
+.card-title-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Stred riadku */
+    transform: translateX(-50%); /* Posun späť o polovicu šírky */
+    bottom: 0;
+    width: 60px; /* Šírka čiary */
+    height: 2px; /* Hrúbka čiary */
+    background-color: white; /* Farba čiary */
+}
+
+/* Vlastný CSS pre tmavý transparentný overlay */
+.card-img-overlay-darken {
+    background-color: rgba(0, 0, 0, 0.5); /* Čierna s 50% transparentnosťou */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
